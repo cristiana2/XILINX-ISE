@@ -8,3 +8,13 @@ VHDL model of a DEMUX 3/8 demultiplexer.
 The block diagram can be seen using the RTL Schematic and the related VHDL program is shown in this example. The program is a variant of the program where the generic alternative was removed and the validation input was transformed into a data input. 
 # Ex 2.5
 VHDL model of a DEMUX 2/4x2 vectorial demultiplexer with a data input and 4 outputs on 2 bits each, but without validation inputs.
+# Ex 6.2 
+It will be modeling/synthesize in VHDL a parallel-parallel register with 8 bits length, also called buffer register using Flip-Flop type D. We can observe that in line 38 it is found the rising_edge() function which is written to detect the appearance of the positive edge of the clock pulse.
+# Ex 6.3
+It will be modeling/synthesize in VHDL a series-series right shift register.For modeling, it was necessary to input a saQ signal at the output
+of the register because the oQ output cannot appear in the right member of an assignment instruction.
+# Ex 6.4
+It will be modeling/synthesize in VHDL a series-parallel right shift register.Also for this modeling it was necessary to introduce a signal saQ at the output of the register, because the output oQ cannot appear in the right member of an assignment instruction. Changing the value of this signal is done only on the positive edge of the clock signal. The occurrence of the edge is also detected with the rising_edge() function in line 39. If the active edge is the negative edge, its detection involves the use of the falling_edge() function.
+# Ex 6.5
+Modeling VHDL, synthesize and test an 8-bit series-parallel register (right shift register) made with FF type D flip-flops. There is no initialization signal.The command block is modeled with the instruction in line 40 in the form of a concatenation between the serial input and the old contents of the register shift with one position to the right.The block of memory cells is modeled with the instructions in lines 42 and 43. The input of the saQ signal is necessary because the
+output of this block is on the one hand the output of the system and on the other hand the reaction from the input of the control block.
